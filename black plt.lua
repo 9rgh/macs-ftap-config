@@ -34,3 +34,9 @@ end)
 if not ok then
 	warn("[blackplt] load failed:", err)
 end
+
+for _, obj in ipairs(workspace:GetDescendants()) do
+    if obj:IsA("BasePart") and obj.Material == Enum.Material.Grass then
+        obj.Color = Color3.fromRGB(120, 120, 120)
+    end
+end
